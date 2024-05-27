@@ -29,7 +29,7 @@ app.use(express.json());
 
 /* --------------------------------- Routes --------------------------------- */
 app.get('/', (req, res) => {
-    res.json({"message": "Hola mundo"})
+    res.render('index')
 });
 
 /* ------------------------------ Public files ------------------------------ */
