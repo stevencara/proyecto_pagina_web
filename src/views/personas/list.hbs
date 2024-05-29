@@ -9,6 +9,8 @@
                         <th scope="col" class="col-4">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Edad</th>
+                        <th scope="col">Observacion</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -18,6 +20,10 @@
                             <td>{{name}}</td>
                             <td>{{lastname}}</td>
                             <td>{{age}}</td>
+                            <td>{{observacion}}</td>
+                            <td>
+                                <img src="/uploads/{{imagen}}" style="width:150px; height:150px; display:block"style="width:150px; height:150px; display:block">
+                            </td>
                             <td>
                                 <div class="btn btn-group">
                                     <a href="/edit/{{id}}" class="btn btn-warning p-2">
