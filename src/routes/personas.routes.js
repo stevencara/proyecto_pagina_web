@@ -171,4 +171,37 @@ router.post('/editsuscripcion/:id',  upload.single('file'), async (req, res) => 
     }
 });
 
+/* -------------------------- RUTA PARA PRODUCTO 1 -------------------------- */
+router.get('/producto1', (req, res) => {
+    res.render('productos/producto1')
+});
+
+router.get('/producto2', (req, res) => {
+    res.render('productos/producto2')
+});
+
+router.get('/producto3', (req, res) => {
+    res.render('productos/producto3')
+});
+
+router.get('/producto4', (req, res) => {
+    res.render('productos/producto4')
+});
+
+router.get('/producto5', (req, res) => {
+    res.render('productos/producto5')
+});
+
+router.get('/producto6', (req, res) => {
+    res.render('productos/producto6')
+});
+
+router.get('/producto7', (req, res) => {
+    res.render('productos/producto7')
+});
+
+router.get('/producto8', (req, res) => {
+    res.render('productos/producto8')
+});
+
 export default router;  
