@@ -24,18 +24,27 @@ ATL-SAC-0642
             <div class="form-group mt-2 d-grid gap-2">
                 <a href="/add" class="btn btn-primary">Atrás</a>
             </div>
-            <div class="form-group mt-2 d-grid gap-2">
-                <a href="/producto1" class="btn btn-success">Añadir a carrito<i class="fa-solid fa-cart-plus"></i></a>
-            </div>
+
+            <form action="/add" method="post" enctype="multipart/form-data">
+
+                <input class="form-control" type="hidden" name="producto" id="producto" value="PINZA PELADORA DE FIBRA"
+                    readonly required>
+
+                <input class="form-control" type="hidden" name="descripcion" id="descripcion"
+                    value="Sangradora de Fibra Armada Diámetros 6 a 42 MM ATL-SAC-0642"
+                    readonly required>
+
+                <input class="form-control" type="hidden" name="precio" id="precio" value="30" readonly required>
+
+                <input class="form-control" type="hidden" name="cantidad" id="cantidad" value="1" readonly required>
+
+                <div class="form-group mt-4 d-grid gap-2">
+                    <button class="btn btn-success">Añadir a carrito <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+
+            </form>
 
             </button>
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>

@@ -5,15 +5,19 @@
         </div>
         <div class="col-md-6">
             <h2>SANGRADORA DE FIBRA ADSS</h2>
-            <p class="text-muted">Sangradora de Fibra ADSS Longitudinal/transversal Diámetros 10 a 26 MM ATL-SLAC-0825</p>
+            <p class="text-muted">Sangradora de Fibra ADSS Longitudinal/transversal Diámetros 10 a 26 MM ATL-SLAC-0825
+            </p>
             <h4>Características Técnicas</h4>
             <ul class="list-unstyled">
                 <li><strong>Material: </strong> 20 cm de longitud total</li>
-                <li><strong>Dimensiones: </strong> Ideal para pelar cables de fibra óptica de 0.8 mm a 2.5 mm de diámetro</li>
+                <li><strong>Dimensiones: </strong> Ideal para pelar cables de fibra óptica de 0.8 mm a 2.5 mm de
+                    diámetro</li>
                 <li><strong>Uso: </strong> Permite ajustes precisos para adaptarse al tamaño del cable</li>
                 <li><strong>Mango: </strong> Ergonómico para mayor comodidad y control durante el uso</li>
-                <li><strong>Mecanismo de Bloqueo: </strong> Garantiza seguridad al mantener las cuchillas en posición cerrada cuando no están en uso</li>
-                <li><strong>Recubrimiento: </strong> Protección adicional en las cuchillas para prolongar la vida útil y evitar daños a las fibras ópticas</li>
+                <li><strong>Mecanismo de Bloqueo: </strong> Garantiza seguridad al mantener las cuchillas en posición
+                    cerrada cuando no están en uso</li>
+                <li><strong>Recubrimiento: </strong> Protección adicional en las cuchillas para prolongar la vida útil y
+                    evitar daños a las fibras ópticas</li>
                 <li><strong>Fabricante: </strong>ATL Tools Ltd.</li>
                 <li><strong>Garantía: </strong>Garantía limitada de 1 año</li>
             </ul>
@@ -22,18 +26,27 @@
             <div class="form-group mt-2 d-grid gap-2">
                 <a href="/add" class="btn btn-primary">Atrás</a>
             </div>
-            <div class="form-group mt-2 d-grid gap-2">
-                <a href="/producto1" class="btn btn-success">Añadir a carrito<i class="fa-solid fa-cart-plus"></i></a>
-            </div>
+            
+            <form action="/add" method="post" enctype="multipart/form-data">
+
+                <input class="form-control" type="hidden" name="producto" id="producto" value="SANGRADORA DE FIBRA ADSS"
+                    readonly required>
+
+                <input class="form-control" type="hidden" name="descripcion" id="descripcion"
+                    value="Sangradora de Fibra ADSS Longitudinal/transversal Diámetros 10 a 26 MM ATL-SLAC-0825"
+                    readonly required>
+
+                <input class="form-control" type="hidden" name="precio" id="precio" value="50" readonly required>
+
+                <input class="form-control" type="hidden" name="cantidad" id="cantidad" value="1" readonly required>
+
+                <div class="form-group mt-4 d-grid gap-2">
+                    <button class="btn btn-success">Añadir a carrito <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+
+            </form>
 
             </button>
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
