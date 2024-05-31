@@ -4,7 +4,13 @@ import morgan from 'morgan';
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
 import {engine} from 'express-handlebars';
+import Handlebars from 'handlebars';
 import personasRoutes from './routes/personas.routes.js'
+
+/* --------------------------------- Helpers -------------------------------- */
+Handlebars.registerHelper('eq', function(a, b) {
+    return a === b;
+});
 
 /* ----------------------------- Initialization ----------------------------- */
 const app = express();

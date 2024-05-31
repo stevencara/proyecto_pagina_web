@@ -15,12 +15,10 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage});
 
+
+/* -------------------------- RUTAS PARA PRODUCTOS -------------------------- */
 router.get('/add', (req, res) => {
     res.render('personas/add')
-});
-
-router.get('/addservicios', (req, res) => {
-    res.render('personas/addservicios')
 });
 
 router.post('/add', upload.single('file'), async (req, res) => {
@@ -95,5 +93,82 @@ router.post('/edit/:id',  upload.single('file'), async (req, res) => {
     }
 });
 
+
+/* ------------------------ RUTAS PARA SUSCRIPCIONES ------------------------ */
+router.get('/addsuscripcion', (req, res) => {
+    res.render('suscripciones/addsuscripcion')
+});
+
+router.post('/addsuscripcion', upload.single('file'), async (req, res) => {
+    try {
+        const {name, lastname, email, age, price, tiempo, certified, state, membership, description} = req.body
+        let newPersona = {}
+
+        if (req.file) {
+            const file = req.file
+            const imagen_original = file.originalname
+            const imagen = file.filename
+
+            newPersona = {name, lastname, email, age, imagen, price, tiempo, certified, state,membership, description}
+        } else {
+            newPersona = {name, lastname, email, age, price, tiempo, certified, state, membership, description}
+        }
+        await pool.query('INSERT INTO suscriptores SET ?', [newPersona]);
+        res.redirect('/listsuscripcion');
+        
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+router.get('/listsuscripcion', async(req, res) => {
+    try {
+        const [result] = await pool.query('SELECT * FROM suscriptores');
+        res.render('suscripciones/listsuscripcion', {suscriptores: result})
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+router.get('/deletesuscripcion/:id', async(req, res) => {
+    try {
+        const {id} = req.params;
+        await pool.query('DELETE FROM suscriptores WHERE id=?', [id]);
+        res.redirect('/listsuscripcion');
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+router.get('/editsuscripcion/:id', async(req, res) => {
+    try {
+        const {id} = req.params
+        const [persona] = await pool.query('SELECT * FROM suscriptores WHERE id = ?', [id]);
+        const personaEdit = persona[0];
+        res.render('suscripciones/editsuscripcion', {persona: personaEdit})
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+router.post('/editsuscripcion/:id',  upload.single('file'), async (req, res) => {
+    try {
+        const { id } = req.params
+        const { name, lastname, email, age, price, tiempo, certified, state, membership, description } = req.body
+        let editPersona = {}
+        if(req.file){
+            const file = req.file
+            const imagen_original = file.originalname
+            const imagen = file.filename
+            editPersona = { name, lastname, email, age, price, tiempo, certified, state, membership, description, imagen }
+        }else{
+            editPersona = { name, lastname, email, age, price, tiempo, certified, state, membership, description }
+        }
+        await pool.query('UPDATE suscriptores SET ? WHERE id = ?', [editPersona, id]);
+        res.redirect('/listsuscripcion');
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 
 export default router;  
