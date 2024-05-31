@@ -21,7 +21,7 @@ router.get('/add', (req, res) => {
 
 router.post('/add', upload.single('file'), async (req, res) => {
     try {
-        const {name, lastname, age, observacion} = req.body
+        const {producto, descripcion, precio, cantidad} = req.body
         let newPersona = {}
 
         if (req.file) {
@@ -29,9 +29,9 @@ router.post('/add', upload.single('file'), async (req, res) => {
             const imagen_original = file.originalname
             const imagen = file.filename
 
-            newPersona = {name, lastname, age, observacion, imagen}
+            newPersona = {producto, descripcion, precio, imagen, cantidad}
         } else {
-            newPersona = {name, lastname, age, observacion}
+            newPersona = {producto, descripcion, precio, cantidad}
         }
         await pool.query('INSERT INTO personas SET ?', [newPersona]);
         res.redirect('/list');
@@ -71,27 +71,23 @@ router.get('/edit/:id', async(req, res) => {
     }
 });
 
-router.post('/edit/:id', async(req, res) => {
+router.post('/edit/:id',  upload.single('file'), async (req, res) => {
     try {
-        const {id} = req.params
-        const {name, lastname, age, observacion} = req.body
+        const { id } = req.params
+        const { producto, descripcion, precio, cantidad } = req.body
         let editPersona = {}
-
-        if (req.file) {
+        if(req.file){
             const file = req.file
             const imagen_original = file.originalname
             const imagen = file.filename
-
-            editPersona = {name, lastname, age, observacion, imagen}
-        } else {
-            editPersona = {name, lastname, age, observacion}
+            editPersona = { producto, descripcion, precio, cantidad, imagen }
+        }else{
+            editPersona = { producto, descripcion, precio, cantidad }
         }
-        
         await pool.query('UPDATE personas SET ? WHERE id = ?', [editPersona, id]);
         res.redirect('/list');
-
     } catch (error) {
-        res.status(500).json({message: error.message});
+        res.status(500).json({ message: error.message });
     }
 });
 

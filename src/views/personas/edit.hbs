@@ -3,32 +3,34 @@
         <div class="col-md-4 mx-auto">
             <div class="card text-center">
                 <div class="card-header">
-                    <h3 class="text-uppercase">Editar una persona</h3>
+                    <h3 class="text-uppercase">Editar producto</h3>
                 </div>
                 <div class="card-body">
                     <form action="/edit/{{persona.id}}" method="post" enctype="multipart/form-data">
 
                         <div class="input-group mt-2">
-                            <label for="name" class="input-group-text">Nombre persona</label>
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Steven" value="{{persona.name}}" autofocus required>
+                            <input class="form-control text-center text-uppercase fw-bold" type="text" name="producto"
+                                id="producto" value="{{persona.producto}}" readonly autofocus required>
                         </div>
 
                         <div class="input-group mt-2">
-                            <label for="lastname" class="input-group-text">Apellido persona</label>
-                            <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" value="{{persona.lastname}}" required>
+                            <textarea class="form-control custom-textarea" name="descripcion" id="descripcion"
+                                readonly>{{persona.descripcion}}</textarea>
                         </div>
 
                         <div class="input-group mt-2">
-                            <label for="age" class="input-group-text">Edad</label>
-                            <input class="form-control" type="number" name="age" id="age" placeholder="Ejemplo: 25" value="{{persona.age}}" required>
+                            <label for="precio" class="input-group-text">Precio</label>
+                            <input class="form-control text-end" type="number" name="precio" id="precio"
+                                value="{{persona.precio}}" readonly autofocus required>
                         </div>
 
                         <div class="input-group mt-2">
-                            <label for="observacion" class="input-group-text">Observacion</label>
-                            <input class="form-control" type="text" name="observacion" id="observacion" placeholder="Escriba alguna observacion..." value="{{persona.observacion}}">
+                            <label for="cantidad" class="input-group-text">Cantidad</label>
+                            <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                value="{{persona.cantidad}}" min="1" max="10" required>
                         </div>
 
-                        <div class="input-group mt-2">
+                        <!--<div class="input-group mt-2">
                             <input class="form-control" type="file" name="file" id="file">
                         </div>
 
@@ -36,7 +38,7 @@
                         <div class="input-group mt-2">
                             <img src="/uploads/{{persona.imagen}}" style="width: 150px; height: 150px; display:block" class="card-img-top mx-auto m-2 rounded-circle">
                         </div>
-                        {{/if}}
+                        {{/if}}-->
 
 
                         <div class="form-group mt-4 d-grid gap-2">
@@ -44,7 +46,7 @@
                         </div>
 
                     </form>
-                </div>  
+                </div>
             </div>
         </div>
     </div>

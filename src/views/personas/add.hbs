@@ -1,44 +1,228 @@
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card text-center">
-                <div class="card-header">
-                    <h3 class="text-uppercase">Crear nueva persona</h3>
+<section class="nosotros my-5">
+    <h2 class="text-center my-5">Nuestros Productos</h2>
+    <div class="container">
+        <div class="row">
+<!------------------------------- PRODUCTO 1 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h3 class="text-uppercase">Producto #1</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
+                                            name="producto" id="producto" value="ballena azul" readonly autofocus
+                                            required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="100" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="10" required>
+                                    </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="card-body">
-                    <form action="/add" method="post" enctype="multipart/form-data">
-
-                        <div class="input-group mt-2">
-                            <label for="name" class="input-group-text">Nombre persona</label>
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Steven" autofocus required>
-                        </div>
-
-                        <div class="input-group mt-2">
-                            <label for="lastname" class="input-group-text">Apellido persona</label>
-                            <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus required>
-                        </div>
-
-                        <div class="input-group mt-2">
-                            <label for="age" class="input-group-text">Edad</label>
-                            <input class="form-control" type="number" name="age" id="age" placeholder="Ejemplo: 25" autofocus required>
-                        </div>
-
-                        <div class="input-group mt-2">
-                            <label for="observacion" class="input-group-text">Observacion</label>
-                            <input class="form-control" type="text" name="observacion" id="observacion" placeholder="Escriba alguna observacion..." autofocus>
-                        </div>
-
-                        <div class="input-group mt-2">
-                            <input class="form-control" type="file" name="file" id="file">
-                        </div>
-
-                        <div class="form-group mt-4 d-grid gap-2">
-                            <button class="btn btn-success">Crear</button>
-                        </div>
-
-                    </form>
-                </div>  
             </div>
+
+<!------------------------------- PRODUCTO 2 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h3 class="text-uppercase">Producto #2</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
+                                            name="producto" id="producto" value="ballena azul" readonly autofocus
+                                            required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="100" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="10" required>
+                                    </div>
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 3 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h3 class="text-uppercase">Producto #3</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
+                                            name="producto" id="producto" value="ballena azul" readonly autofocus
+                                            required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="100" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="10" required>
+                                    </div>
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 4 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h3 class="text-uppercase">Producto #4</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
+                                            name="producto" id="producto" value="ballena azul" readonly autofocus
+                                            required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="100" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="10" required>
+                                    </div>
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+</section>
