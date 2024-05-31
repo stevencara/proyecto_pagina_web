@@ -19,6 +19,10 @@ router.get('/add', (req, res) => {
     res.render('personas/add')
 });
 
+router.get('/addservicios', (req, res) => {
+    res.render('personas/addservicios')
+});
+
 router.post('/add', upload.single('file'), async (req, res) => {
     try {
         const {producto, descripcion, precio, cantidad} = req.body
