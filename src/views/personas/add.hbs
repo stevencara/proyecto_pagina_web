@@ -7,39 +7,36 @@
                 <div class="container">
                     <div class="mx-auto">
                         <div class="card text-center">
-                            <div class="card-header">
-                                <h3 class="text-uppercase">Producto #1</h3>
-                            </div>
                             <div class="card-body">
                                 <form action="/add" method="post" enctype="multipart/form-data">
 
                                     <div>
                                         <img type="image" name="image" id="image"
-                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                            src="img/sangradora.jpg" alt="" style="width: 250px; height:200px">
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
-                                            name="producto" id="producto" value="ballena azul" readonly autofocus
-                                            required>
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>SANGRADORA DE FIBRA ADSS</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <textarea class="form-control custom-textarea" name="descripcion"
                                             id="descripcion"
-                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                            readonly>Sangradora de Fibra ADSS Longitudinal/transversal Diámetros 10 a 26 MM ATL-SLAC-0825</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
                                         <input class="form-control text-end" type="number" name="precio" id="precio"
-                                            value="100" readonly autofocus required>
+                                            value="50" readonly autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="cantidad" class="input-group-text">Cantidad</label>
                                         <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
-                                            min="1" max="10" required>
+                                            min="1" max="20" required>
                                     </div>
 
                                     <!--<div class="input-group mt-2">
@@ -69,40 +66,48 @@
                 <div class="container">
                     <div class="mx-auto">
                         <div class="card text-center">
-                            <div class="card-header">
-                                <h3 class="text-uppercase">Producto #2</h3>
-                            </div>
                             <div class="card-body">
                                 <form action="/add" method="post" enctype="multipart/form-data">
 
                                     <div>
                                         <img type="image" name="image" id="image"
-                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                            src="img/pinza.jpg" alt="" style="width: 250px; height:200px">
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
-                                            name="producto" id="producto" value="ballena azul" readonly autofocus
-                                            required>
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>PINZA PELADORA DE FIBRA</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <textarea class="form-control custom-textarea" name="descripcion"
                                             id="descripcion"
-                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                            readonly>Sangradora de Fibra Armada
+Diámetros 6 a 42 MM
+ATL-SAC-0642</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
                                         <input class="form-control text-end" type="number" name="precio" id="precio"
-                                            value="100" readonly autofocus required>
+                                            value="30" readonly autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="cantidad" class="input-group-text">Cantidad</label>
                                         <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
-                                            min="1" max="10" required>
+                                            min="1" max="20" required>
                                     </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
 
                                     <div class="form-group mt-4 d-grid gap-2">
                                         <button class="btn btn-success">Añadir a carrito <i
@@ -115,47 +120,54 @@
                     </div>
 
                 </div>
-            </div>
+            </div> 
 
 <!------------------------------- PRODUCTO 3 ------------------------------->
             <div class="col-3 mt-3">
                 <div class="container">
                     <div class="mx-auto">
                         <div class="card text-center">
-                            <div class="card-header">
-                                <h3 class="text-uppercase">Producto #3</h3>
-                            </div>
                             <div class="card-body">
                                 <form action="/add" method="post" enctype="multipart/form-data">
 
                                     <div>
                                         <img type="image" name="image" id="image"
-                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                            src="img/miller_clamp.jpg" alt="" style="width: 250px; height:200px">
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
-                                            name="producto" id="producto" value="ballena azul" readonly autofocus
-                                            required>
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>MILLER CLAMP</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <textarea class="form-control custom-textarea" name="descripcion"
                                             id="descripcion"
-                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                            readonly>Peladora de chaqueta de
+Fibra DROP OTL- MC</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
                                         <input class="form-control text-end" type="number" name="precio" id="precio"
-                                            value="100" readonly autofocus required>
+                                            value="30" readonly autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="cantidad" class="input-group-text">Cantidad</label>
                                         <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
-                                            min="1" max="10" required>
+                                            min="1" max="20" required>
                                     </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
 
                                     <div class="form-group mt-4 d-grid gap-2">
                                         <button class="btn btn-success">Añadir a carrito <i
@@ -175,31 +187,151 @@
                 <div class="container">
                     <div class="mx-auto">
                         <div class="card text-center">
-                            <div class="card-header">
-                                <h3 class="text-uppercase">Producto #4</h3>
-                            </div>
                             <div class="card-body">
                                 <form action="/add" method="post" enctype="multipart/form-data">
 
                                     <div>
                                         <img type="image" name="image" id="image"
-                                            src="img/logo_ciberfibra.jpeg" alt="" style="width: 250px; height:200px">
+                                            src="img/zunchadora.jpg" alt="" style="width: 250px; height:200px">
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <input class="form-control text-center text-uppercase fw-bold" type="text"
-                                            name="producto" id="producto" value="ballena azul" readonly autofocus
-                                            required>
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>SUNCHADORA DE CINTA METALICA</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <textarea class="form-control custom-textarea" name="descripcion"
                                             id="descripcion"
-                                            readonly> "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui sed eveniet a doloremque perspiciatis assumenda! Pariatur facere, amet corrupti eum a, adipisci expedita quia et dolor sint, eaque itaque. Libero!"</textarea>
+                                            readonly>Sunchadora
+ATL-MSSB01
+para vinchas y
+cintas metalicas</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <label for="precio" class="input-group-text">Precio</label>
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="50" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="40" required>
+                                    </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 5 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/cortadora.jpg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>CORTADOR CLEAVER</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly>GRANDWAY / Cleaver GW-800A
+Cortador de hilos de fibra
+alta precisión</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="70" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="40" required>
+                                    </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 6 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/vfl.jpg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>VISUAL FAULT LOCATOR</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly>GRANDWAY / VLS-8-10 VLF Fibra</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
                                         <input class="form-control text-end" type="number" name="precio" id="precio"
                                             value="100" readonly autofocus required>
                                     </div>
@@ -207,8 +339,135 @@
                                     <div class="input-group mt-2">
                                         <label for="cantidad" class="input-group-text">Cantidad</label>
                                         <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
-                                            min="1" max="10" required>
+                                            min="1" max="40" required>
                                     </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 7 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/pinza_trafico.jpg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>PINZA DE TRÁFICO T-FI350</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly>El identificador de fibra óptica SKYCOM T-FI350 puede identificar rápidamente la dirección de la fibra transmitida y mostrar la potencia relativa del núcleo sin dañar la fibra doblada. Cuando hay tráfico, se activa el tono audible intermitente.</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="120" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="40" required>
+                                    </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
+
+                                    <div class="form-group mt-4 d-grid gap-2">
+                                        <button class="btn btn-success">Añadir a carrito <i
+                                                class="fa-solid fa-cart-plus"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!------------------------------- PRODUCTO 8 ------------------------------->
+            <div class="col-3 mt-3">
+                <div class="container">
+                    <div class="mx-auto">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <form action="/add" method="post" enctype="multipart/form-data">
+
+                                    <div>
+                                        <img type="image" name="image" id="image"
+                                            src="img/fusionadora.jpg" alt="" style="width: 250px; height:200px">
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea fw-bold text-center" name="producto"
+                                            id="producto" style="background:gray"
+                                            readonly>FUSIONADORA DE FIBRA ÓPTICA INNO VIEW 8+</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <textarea class="form-control custom-textarea" name="descripcion"
+                                            id="descripcion"
+                                            readonly>Fusionadora de fibra óptica VIEW 8+ Diseñada para gran capacidad de fusiones diarias</textarea>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="precio" class="input-group-text">Precio (USD)</label>
+                                        <input class="form-control text-end" type="number" name="precio" id="precio"
+                                            value="5000" readonly autofocus required>
+                                    </div>
+
+                                    <div class="input-group mt-2">
+                                        <label for="cantidad" class="input-group-text">Cantidad</label>
+                                        <input class="form-control text-end" type="number" name="cantidad" id="cantidad"
+                                            min="1" max="5" required>
+                                    </div>
+
+                                    <!--<div class="input-group mt-2">
+                                        <input class="form-control" type="file" name="file" id="file">
+                                        </div>-->
+
+                                    <!--<div class="input-group mt-2">
+                                        <label for="lastname" class="input-group-text">Apellido persona</label>
+                                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Cabrales" autofocus>
+                                        </div>-->
 
                                     <div class="form-group mt-4 d-grid gap-2">
                                         <button class="btn btn-success">Añadir a carrito <i
