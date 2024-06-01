@@ -8,9 +8,10 @@
                     <tr class="table-dark">
                         <th scope="col" class="col-4">Producto</th>
                         <th scope="col">Descripcion</th>
-                        <th scope="col">Precio</th>
+                        <th scope="col">Precio <br>(USD)</th>
                         <!--<th scope="col">Imagen</th>-->
                         <th scope="col">Cantidad</th>
+                        <th scope="col">Total <br>(USD)</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -24,6 +25,9 @@
                                 <img src="/uploads/{{imagen}}" style="width:150px; height:150px; display:block" class="card-img-top mx-auto m-2 rounded-circle">
                             </td>-->
                             <td>{{cantidad}}</td>
+                    <td>
+                        {{calculateTotal cantidad precio}}
+                    </td>
                             <td>
                                 <div class="btn btn-group">
                                     <a href="/edit/{{id}}" class="btn btn-warning p-2">

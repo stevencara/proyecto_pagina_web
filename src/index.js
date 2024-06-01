@@ -12,6 +12,10 @@ Handlebars.registerHelper('eq', function(a, b) {
     return a === b;
 });
 
+Handlebars.registerHelper('calculateTotal', function(cantidad, precio) {
+    return cantidad * precio;
+});
+
 /* ----------------------------- Initialization ----------------------------- */
 const app = express();
 /*Evitar colisiones de nombres de variable*/
