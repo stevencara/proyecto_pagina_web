@@ -8,123 +8,135 @@
                     <div class="mx-auto">
                         <div class="card text-center">
                             <div class="card-body">
-                                <form action="/editsuscripcion/{{persona.id}}" method="post"
+                                <form action="/editsuscripcion/{{suscripcion.id}}" method="post"
                                     enctype="multipart/form-data">
 
                                     <div class="input-group mt-2">
-                                        {{#if (eq persona.membership "MEMBRESIA ORO")}}
+                                        {{#if (eq suscripcion.membership "MEMBRESIA ORO")}}
                                         <textarea class="form-control custom-textarea fw-bold text-center" type="text"
                                             name="membership" id="membership" style="background:gold"
-                                            readonly>{{persona.membership}}</textarea>
-                                        {{else if (eq persona.membership "MEMBRESIA PLATA")}}
+                                            readonly>{{suscripcion.membership}}</textarea>
+                                        {{else if (eq suscripcion.membership "MEMBRESIA PLATA")}}
                                         <textarea class="form-control custom-textarea fw-bold text-center" type="text"
                                             name="membership" id="membership" style="background:silver"
-                                            readonly>{{persona.membership}}</textarea>
-                                        {{else if (eq persona.membership "MEMBRESIA BRONCE")}}
+                                            readonly>{{suscripcion.membership}}</textarea>
+                                        {{else if (eq suscripcion.membership "MEMBRESIA BRONCE")}}
                                         <textarea class="form-control custom-textarea fw-bold text-center" type="text"
                                             name="membership" id="membership" style="background:#cd7f32"
-                                            readonly>{{persona.membership}}</textarea>
+                                            readonly>{{suscripcion.membership}}</textarea>
                                         {{else}}
-                                        <p>No se encontró una membresía válida para {{persona.nombre}}</p>
+                                        <p>No se encontró una membresía válida para {{suscripcion.nombre}}</p>
                                         {{/if}}
                                     </div>
 
-                                    {{#if (eq persona.membership "MEMBRESIA ORO")}}
+                                    {{#if (eq suscripcion.membership "MEMBRESIA ORO")}}
                                     <div class="input-group mt-2">
-                                        <img src="/img/especialista.jpg"
-                                            style="width: 355px; height:250px">
+                                        <img src="/img/especialista.jpg" style="width: 355px; height:250px">
                                     </div>
-                                    {{else if (eq persona.membership "MEMBRESIA PLATA")}}
+                                    {{else if (eq suscripcion.membership "MEMBRESIA PLATA")}}
                                     <div class="input-group mt-2">
-                                        <img src="/img/empalmador.jpg"
-                                            style="width: 355px; height:250px">
+                                        <img src="/img/empalmador.jpg" style="width: 355px; height:250px">
                                     </div>
-                                    {{else if (eq persona.membership "MEMBRESIA BRONCE")}}
+                                    {{else if (eq suscripcion.membership "MEMBRESIA BRONCE")}}
                                     <div class="input-group mt-2">
                                         <img src="/img/liniero.jpg" style="width: 355px; height:250px">
                                     </div>
                                     {{else}}
-                                    <p>No se encontró una membresía válida para {{persona.nombre}}</p>
+                                    <p>No se encontró una membresía válida para {{suscripcion.nombre}}</p>
                                     {{/if}}
 
                                     <div class="input-group mt-2">
-                                        {{#if (eq persona.membership "MEMBRESIA ORO")}}
-                                      <label for="certified" class="input-group-text" style="background:black; color:white">Certificado</label>
-                                        <textarea class="form-control custom-textarea" name="certified" id="certified" style="background-color: gold"
-                                            readonly>{{persona.certified}}</textarea>
-                                        {{else if (eq persona.membership "MEMBRESIA PLATA")}}
-                                      <label for="certified" class="input-group-text" style="background:black; color:white">Certificado</label>
-                                        <textarea class="form-control custom-textarea" name="certified" id="certified" style="background-color: silver"
-                                            readonly>{{persona.certified}}</textarea>
-                                        {{else if (eq persona.membership "MEMBRESIA BRONCE")}}
-                                      <label for="certified" class="input-group-text" style="background:black; color:white">Certificado</label>
-                                        <textarea class="form-control custom-textarea" name="certified" id="certified" style="background-color: #cd7f32"
-                                            readonly>{{persona.certified}}</textarea>
+                                        {{#if (eq suscripcion.membership "MEMBRESIA ORO")}}
+                                        <label for="certified" class="input-group-text"
+                                            style="background:black; color:white">Certificado</label>
+                                        <textarea class="form-control custom-textarea" name="certified" id="certified"
+                                            style="background-color: gold" readonly>{{suscripcion.certified}}</textarea>
+                                        {{else if (eq suscripcion.membership "MEMBRESIA PLATA")}}
+                                        <label for="certified" class="input-group-text"
+                                            style="background:black; color:white">Certificado</label>
+                                        <textarea class="form-control custom-textarea" name="certified" id="certified"
+                                            style="background-color: silver"
+                                            readonly>{{suscripcion.certified}}</textarea>
+                                        {{else if (eq suscripcion.membership "MEMBRESIA BRONCE")}}
+                                        <label for="certified" class="input-group-text"
+                                            style="background:black; color:white">Certificado</label>
+                                        <textarea class="form-control custom-textarea" name="certified" id="certified"
+                                            style="background-color: #cd7f32"
+                                            readonly>{{suscripcion.certified}}</textarea>
                                         {{else}}
-                                        <p>No se encontró una membresía válida para {{persona.nombre}}</p>
+                                        <p>No se encontró una membresía válida para {{suscripcion.nombre}}</p>
                                         {{/if}}
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <textarea class="form-control custom-textarea" name="description"
-                                            id="description" readonly style="background-color: #dcdcdc">{{persona.description}}</textarea>
+                                            id="description" readonly
+                                            style="background-color: #dcdcdc">{{suscripcion.description}}</textarea>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="name" class="input-group-text">Nombre</label>
                                         <input class="form-control text-start" type="text" name="name" id="name"
-                                            value="{{persona.name}}" autofocus required>
+                                            value="{{suscripcion.name}}" autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="lastname" class="input-group-text">Apellido</label>
                                         <input class="form-control text-start" type="text" name="lastname" id="lastname"
-                                            value="{{persona.lastname}}" autofocus required>
+                                            value="{{suscripcion.lastname}}" autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="email" class="input-group-text">Email</label>
                                         <input class="form-control text-start" type="email" name="email" id="email"
-                                            value="{{persona.email}}" autofocus required>
+                                            value="{{suscripcion.email}}" autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <label for="age" class="input-group-text">Edad</label>
                                         <input class="form-control text-start" type="number" name="age" id="age"
-                                            min="18" max="90" value="{{persona.age}}" autofocus required>
+                                            min="18" max="90" value="{{suscripcion.age}}" autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
                                         <input class="form-control" type="file" name="file" id="file">
                                     </div>
-                                    {{#if persona.imagen}}
+                                    {{#if suscripcion.imagen}}
                                     <div class="input-group mt-2">
-                                        <img src="/uploads/{{persona.imagen}}"
+                                        <img src="/uploads/{{suscripcion.imagen}}"
                                             style="width: 150px; height: 150px; display:block"
                                             class="card-img-top mx-auto m-2 rounded-circle">
                                     </div>
                                     {{/if}}
 
                                     <div class="input-group mt-2">
-                                        <label for="precio" class="input-group-text" style="background:black; color:white">Precio (USD)</label>
-                                        <input class="form-control text-end" type="number" name="price" id="price" style="background-color: #dcdcdc"
-                                            value="{{persona.price}}" readonly autofocus required>
+                                        <label for="precio" class="input-group-text"
+                                            style="background:black; color:white">Precio (USD)</label>
+                                        <input class="form-control text-end" type="number" name="price" id="price"
+                                            style="background-color: #dcdcdc" value="{{suscripcion.price}}" readonly
+                                            autofocus required>
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <label for="tiempo" class="input-group-text" style="background:black; color:white">Tiempo (meses)</label>
-                                        <input class="form-control text-end" type="number" name="tiempo" id="tiempo" style="background-color: #dcdcdc"
-                                            value="{{persona.tiempo}}" readonly required>
+                                        <label for="tiempo" class="input-group-text"
+                                            style="background:black; color:white">Tiempo (meses)</label>
+                                        <input class="form-control text-end" type="number" name="tiempo" id="tiempo"
+                                            style="background-color: #dcdcdc" value="{{suscripcion.tiempo}}" readonly
+                                            required>
                                     </div>
 
-                                    <input class="form-control text-end" type="hidden" name="state" id="state" value="activo" readonly required>
+                                    <input class="form-control text-end" type="hidden" name="state" id="state"
+                                        value="activo" readonly required>
 
                                     <div class="form-group mt-4 d-grid gap-2">
-                                        <button class="btn btn-success">Suscribirse <i
-                                                class="fa-solid fa-star"></i></button>
+                                        <button class="btn btn-success">Actualizar</button>
                                     </div>
 
                                 </form>
+                                <div class="form-group mt-2 d-grid gap-2">
+                                    <a href="/listsuscripcion" class="btn btn-primary">Cancelar</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

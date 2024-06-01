@@ -18,7 +18,7 @@ const upload = multer({storage});
 
 /* -------------------------- RUTAS PARA PRODUCTOS -------------------------- */
 router.get('/add', (req, res) => {
-    res.render('personas/add')
+    res.render('productos/add')
 });
 
 router.post('/add', upload.single('file'), async (req, res) => {
@@ -35,7 +35,7 @@ router.post('/add', upload.single('file'), async (req, res) => {
         } else {
             newPersona = {producto, descripcion, precio, cantidad}
         }
-        await pool.query('INSERT INTO personas SET ?', [newPersona]);
+        await pool.query('INSERT INTO productos SET ?', [newPersona]);
         res.redirect('/list');
         
     } catch (error) {
@@ -45,8 +45,8 @@ router.post('/add', upload.single('file'), async (req, res) => {
 
 router.get('/list', async(req, res) => {
     try {
-        const [result] = await pool.query('SELECT * FROM personas');
-        res.render('personas/list', {personas: result})
+        const [result] = await pool.query('SELECT * FROM productos');
+        res.render('productos/list', {productos: result})
     } catch (error) {
         res.status(500).json({message: error.message});
     }
@@ -55,7 +55,7 @@ router.get('/list', async(req, res) => {
 router.get('/delete/:id', async(req, res) => {
     try {
         const {id} = req.params;
-        await pool.query('DELETE FROM personas WHERE id=?', [id]);
+        await pool.query('DELETE FROM productos WHERE id=?', [id]);
         res.redirect('/list');
     } catch (error) {
         res.status(500).json({message: error.message});
@@ -65,9 +65,9 @@ router.get('/delete/:id', async(req, res) => {
 router.get('/edit/:id', async(req, res) => {
     try {
         const {id} = req.params
-        const [persona] = await pool.query('SELECT * FROM personas WHERE id = ?', [id]);
-        const personaEdit = persona[0];
-        res.render('personas/edit', {persona: personaEdit})
+        const [producto] = await pool.query('SELECT * FROM productos WHERE id = ?', [id]);
+        const productoEdit = producto[0];
+        res.render('productos/edit', {producto: productoEdit})
     } catch (error) {
         res.status(500).json({message: error.message});
     }
@@ -86,7 +86,7 @@ router.post('/edit/:id',  upload.single('file'), async (req, res) => {
         }else{
             editPersona = { producto, descripcion, precio, cantidad }
         }
-        await pool.query('UPDATE personas SET ? WHERE id = ?', [editPersona, id]);
+        await pool.query('UPDATE productos SET ? WHERE id = ?', [editPersona, id]);
         res.redirect('/list');
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -143,9 +143,9 @@ router.get('/deletesuscripcion/:id', async(req, res) => {
 router.get('/editsuscripcion/:id', async(req, res) => {
     try {
         const {id} = req.params
-        const [persona] = await pool.query('SELECT * FROM suscriptores WHERE id = ?', [id]);
-        const personaEdit = persona[0];
-        res.render('suscripciones/editsuscripcion', {persona: personaEdit})
+        const [suscripcion] = await pool.query('SELECT * FROM suscriptores WHERE id = ?', [id]);
+        const editSuscripcion = suscripcion[0];
+        res.render('suscripciones/editsuscripcion', {suscripcion: editSuscripcion})
     } catch (error) {
         res.status(500).json({message: error.message});
     }
@@ -155,16 +155,16 @@ router.post('/editsuscripcion/:id',  upload.single('file'), async (req, res) => 
     try {
         const { id } = req.params
         const { name, lastname, email, age, price, tiempo, certified, state, membership, description } = req.body
-        let editPersona = {}
+        let editSuscripcion = {}
         if(req.file){
             const file = req.file
             const imagen_original = file.originalname
             const imagen = file.filename
-            editPersona = { name, lastname, email, age, price, tiempo, certified, state, membership, description, imagen }
+            editSuscripcion = { name, lastname, email, age, price, tiempo, certified, state, membership, description, imagen }
         }else{
-            editPersona = { name, lastname, email, age, price, tiempo, certified, state, membership, description }
+            editSuscripcion = { name, lastname, email, age, price, tiempo, certified, state, membership, description }
         }
-        await pool.query('UPDATE suscriptores SET ? WHERE id = ?', [editPersona, id]);
+        await pool.query('UPDATE suscriptores SET ? WHERE id = ?', [editSuscripcion, id]);
         res.redirect('/listsuscripcion');
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -173,35 +173,66 @@ router.post('/editsuscripcion/:id',  upload.single('file'), async (req, res) => 
 
 /* -------------------------- RUTA PARA PRODUCTO 1 -------------------------- */
 router.get('/producto1', (req, res) => {
-    res.render('productos/producto1')
+    res.render('productosind/producto1')
 });
 
 router.get('/producto2', (req, res) => {
-    res.render('productos/producto2')
+    res.render('productosind/producto2')
 });
 
 router.get('/producto3', (req, res) => {
-    res.render('productos/producto3')
+    res.render('productosind/producto3')
 });
 
 router.get('/producto4', (req, res) => {
-    res.render('productos/producto4')
+    res.render('productosind/producto4')
 });
 
 router.get('/producto5', (req, res) => {
-    res.render('productos/producto5')
+    res.render('productosind/producto5')
 });
 
 router.get('/producto6', (req, res) => {
-    res.render('productos/producto6')
+    res.render('productosind/producto6')
 });
 
 router.get('/producto7', (req, res) => {
-    res.render('productos/producto7')
+    res.render('productosind/producto7')
 });
 
 router.get('/producto8', (req, res) => {
-    res.render('productos/producto8')
+    res.render('productosind/producto8')
 });
+
+
+/* ---------------------------- RUTA CONTACTANOS ---------------------------- */
+
+router.get('/confirmation', (req, res) => {
+    res.render('confirmacion/confirmation')
+});
+
+router.post('/sendform', upload.single('file'), async (req, res) => {
+    try {
+        const {name, email, asunto, mensaje} = req.body
+        let newPersona = {}
+
+        if (req.file) {
+            const file = req.file
+            const imagen_original = file.originalname
+            const imagen = file.filename
+
+            newPersona = {name, email, asunto, mensaje, imagen}
+        } else {
+            newPersona = {name, email, asunto, mensaje}
+        }
+        await pool.query('INSERT INTO emails SET ?', [newPersona]);
+        res.redirect('/confirmation');
+        
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+
 
 export default router;  
